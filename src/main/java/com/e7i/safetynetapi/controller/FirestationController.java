@@ -2,8 +2,6 @@ package com.e7i.safetynetapi.controller;
 
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +16,7 @@ import com.e7i.safetynetapi.model.Firestation;
 
 @RestController
 public class FirestationController {
-	
-	private static final Logger logger = LogManager.getLogger("FirestationController");
-	
+		
 	@GetMapping("/FirestationsAll")
 	public List<Firestation> getFirestations() {
 		return FirestationDao.getFirestationDao();
