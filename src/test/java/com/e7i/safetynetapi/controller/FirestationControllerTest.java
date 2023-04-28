@@ -30,7 +30,7 @@ public class FirestationControllerTest {
 	@Test
 	@Order(1)
 	void getFirestations() throws Exception {
-		mockMvc.perform(get("/FirestationsAll"))
+		mockMvc.perform(get("/Firestations"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$.[0].address", containsString("1509 Culver St")));
 	}
@@ -39,11 +39,11 @@ public class FirestationControllerTest {
 	void postAddFirestaion() throws Exception {
 		String mockFirestationJson = "{ \"address\":\"Diagonal 123\", \"station\":\"10\" }" ;
 		int preSize = FirestationDao.getFirestationDao().size();
-		mockMvc.perform(post("/firestationAdd")
+		mockMvc.perform(post("/firestation")
 				.contentType(APPLICATION_JSON)
 				.content(mockFirestationJson)
 				.accept(APPLICATION_JSON))
-				.andExpect(status().isOk());
+				.andExpect(status().isCreated());
 		assertThat(FirestationDao.getFirestationDao().size()).isEqualTo(preSize + 1);
 		assertThat(FirestationDao.getFirestationDao().get(FirestationDao.getFirestationDao().size()-1).getStationNumber()).isEqualTo(10);
 	}
@@ -51,7 +51,7 @@ public class FirestationControllerTest {
 	@Test
 	void putFirestation() throws Exception {
 		String mockFirestationJson = "{ \"address\":\"1509 Culver St\", \"station\":\"10\" }" ;
-		mockMvc.perform(put("/firestationEdit")
+		mockMvc.perform(put("/firestation")
 				.contentType(APPLICATION_JSON)
 				.content(mockFirestationJson)
 				.accept(APPLICATION_JSON));

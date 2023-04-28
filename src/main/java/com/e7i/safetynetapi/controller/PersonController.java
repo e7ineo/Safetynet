@@ -25,8 +25,8 @@ public class PersonController {
 	
 	@PostMapping("/person")
 	public ResponseEntity<Person> addPerson(@RequestBody Person person) {
-		boolean testSave = PersonDao.savePerson(person);
-		if(testSave) {
+		boolean testAdd = PersonDao.savePerson(person);
+		if(testAdd) {
 			return new ResponseEntity<Person>(person , HttpStatus.CREATED);
 		} else
 			return new ResponseEntity<Person>(person , HttpStatus.BAD_REQUEST);

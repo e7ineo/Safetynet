@@ -2,6 +2,7 @@ package com.e7i.safetynetapi.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,27 +18,27 @@ import com.e7i.safetynetapi.model.Firestation;
 @RestController
 public class FirestationController {
 		
-	@GetMapping("/FirestationsAll")
-	public List<Firestation> getFirestations() {
-		return FirestationDao.getFirestationDao();
+	@GetMapping("/Firestations")
+	public ResponseEntity<List<Firestation>> getFirestations() {
+		return new ResponseEntity<List<Firestation>>(FirestationDao.getFirestationDao(), HttpStatus.OK);
 	}
 	
-	@PostMapping("/firestationAdd")
-	public ResponseEntity<String> addFirestation(@RequestBody Firestation firestation) {
+	@PostMapping("/firestation")
+	public ResponseEntity<Firestation> addFirestation(@RequestBody Firestation firestation) {
 		boolean testAdd = FirestationDao.addFirestation(firestation);
 		if(testAdd) {
-			return ResponseEntity.ok().body("Firestation Saved as :\n" + firestation);
+			return new ResponseEntity<Firestation>(firestation, HttpStatus.CREATED);
 		} else
-			return ResponseEntity.badRequest().body("Not Saved - Missing Fields in the request -> " + firestation);
+			return new ResponseEntity<Firestation>(firestation, HttpStatus.BAD_REQUEST);
 	}
 	
-	@PutMapping("/firestationEdit")
-	public ResponseEntity<String> editFirestation(@RequestBody Firestation firestation) {
+	@PutMapping("/firestation")
+	public ResponseEntity<Firestation> editFirestation(@RequestBody Firestation firestation) {
 		boolean testEdit = FirestationDao.editFirestation(firestation);
 		if(testEdit) {
-			return ResponseEntity.ok().body("Firestation Edited as :\n" + firestation);
+			return new ResponseEntity<Firestation>(firestation, HttpStatus.OK);
 		} else
-			return ResponseEntity.badRequest().body("The address doesn't exist or is empty :\n" + firestation);
+			return new ResponseEntity<Firestation>(firestation, HttpStatus.BAD_REQUEST);
 	}
 	
 	@DeleteMapping("/firestationByAddress/{address}")

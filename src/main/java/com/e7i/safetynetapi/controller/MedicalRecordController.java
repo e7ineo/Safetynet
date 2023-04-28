@@ -25,8 +25,8 @@ public class MedicalRecordController {
 	
 	@PostMapping("/medicalRecord")
 	public ResponseEntity<MedicalRecord> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
-		boolean testSave = MedicalRecordDao.addMedicalRecord(medicalRecord);
-		if(testSave) {
+		boolean testAdd = MedicalRecordDao.addMedicalRecord(medicalRecord);
+		if(testAdd) {
 			return new ResponseEntity<MedicalRecord>(medicalRecord, HttpStatus.OK);			
 		} else 
 			return new ResponseEntity<MedicalRecord>(medicalRecord, HttpStatus.BAD_REQUEST);

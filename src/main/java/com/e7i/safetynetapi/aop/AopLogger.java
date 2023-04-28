@@ -23,7 +23,7 @@ public class AopLogger {
 		if(entity.getStatusCode().is2xxSuccessful()) {
 			logger.info(jp.getSignature().getName() + " OK");
 		} else if(entity.getStatusCode().is4xxClientError()) {
-			logger.info(jp.getSignature().getName() + " NOK");
+			logger.info(jp.getSignature().getName() + " NOK -> " + entity.getBody());
 		}
 	}
 }
