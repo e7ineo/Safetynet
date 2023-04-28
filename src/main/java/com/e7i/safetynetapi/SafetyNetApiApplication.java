@@ -32,5 +32,4 @@ public class SafetyNetApiApplication {
 		udf.createUsersModel();
 		logger.info("SafetyNetAPI Initialized");
 	}
-
 }

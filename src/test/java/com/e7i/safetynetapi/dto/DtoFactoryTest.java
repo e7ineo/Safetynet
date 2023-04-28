@@ -1,4 +1,4 @@
-package com.e7i.safetynet.dto;
+package com.e7i.safetynetapi.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
