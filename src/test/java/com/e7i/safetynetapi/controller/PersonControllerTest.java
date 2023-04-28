@@ -30,7 +30,7 @@ public class PersonControllerTest {
 	@Test
 	@Order(1)
 	void testGetPersonsAll() throws Exception {
-		mockMvc.perform(get("/PersonsAll"))
+		mockMvc.perform(get("/Persons"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$", hasSize(23)))
 		.andExpect(jsonPath("$.[2].firstName", containsString("Tenley")));
@@ -43,11 +43,11 @@ public class PersonControllerTest {
 				+ " \"city\":\"Culver\", \"zip\":\"97451\", \"phone\":\"841-874-7458\","
 				+ " \"email\":\"gramps@email.com\" }";
 		int preAddSize = PersonDao.getPersonDao().size();
-		mockMvc.perform(post("/personAdd")
+		mockMvc.perform(post("/person")
 		.contentType(APPLICATION_JSON)				
 		.content(mockPersonJson)
 		.accept(APPLICATION_JSON))
-		.andExpect(status().isOk());
+		.andExpect(status().isCreated());
 		assertThat(PersonDao.getPersonDao().size()).isEqualTo(preAddSize + 1);
 		assertThat(PersonDao.getPersonDao().get(preAddSize).getFirstName()).isEqualTo("Derrick");
 	}
@@ -58,7 +58,7 @@ public class PersonControllerTest {
 				+ " \"lastName\":\"Stelzer\", \"address\":\"951 LoneTree Rd\","
 				+ " \"city\":\"Culver\", \"zip\":\"97451\", \"phone\":\"841-874-7458\","
 				+ " \"email\":\"gramps@email.com\" }";
-		mockMvc.perform(put("/personEdit")
+		mockMvc.perform(put("/person")
 				.contentType(APPLICATION_JSON)				
 				.content(mockPersonJson)
 				.accept(APPLICATION_JSON))
@@ -71,7 +71,7 @@ public class PersonControllerTest {
 	@Test
 	void testPersonDelete() throws Exception {
 		int sizePreDelete = PersonDao.getPersonDao().size();
-		mockMvc.perform(delete("/Persons/Eric/Cadigan")).andExpect(status().isOk());
+		mockMvc.perform(delete("/person/Eric/Cadigan")).andExpect(status().isOk());
 		assertThat(PersonDao.getPersonDao().size()).isEqualTo(sizePreDelete - 1);	
 	}	
 }

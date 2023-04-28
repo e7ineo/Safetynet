@@ -5,6 +5,7 @@ import com.e7i.safetynetapi.model.*;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,35 +18,36 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PersonController {
 	
-	@GetMapping("/PersonsAll")
-	public List<Person> getPersons() {				
-		return PersonDao.getPersonDao();
+	@GetMapping("/Persons")
+	public ResponseEntity<List<Person>> getPersons() {				
+		return new ResponseEntity<List<Person>>(PersonDao.getPersonDao(), HttpStatus.OK);
 	}
 	
-	@PostMapping("/personAdd")
-	public ResponseEntity<String> addPerson(@RequestBody Person person) {
+	@PostMapping("/person")
+	public ResponseEntity<Person> addPerson(@RequestBody Person person) {
 		boolean testSave = PersonDao.savePerson(person);
-		if(!testSave) {
-			return ResponseEntity.badRequest().body("Not Saved - Missing Fields in the request -> \n" + person);
+		if(testSave) {
+			return new ResponseEntity<Person>(person , HttpStatus.CREATED);
 		} else
-			return ResponseEntity.ok().body("Person saved as :\n" + person.toString());
+			return new ResponseEntity<Person>(person , HttpStatus.BAD_REQUEST);
 	}
 	
-	@PutMapping("/personEdit")
-	public ResponseEntity<String> editPerson(@RequestBody Person person) {
+	@PutMapping("/person")
+	public ResponseEntity<Person> editPerson(@RequestBody Person person) {
 		boolean testEdit = PersonDao.editPerson(person);
-		if(!testEdit) {
-			return ResponseEntity.badRequest().body("The user doesn't exist or is empty :\n" + person.toString());
+		if(testEdit) {
+			return new ResponseEntity<Person>(person , HttpStatus.OK);
 		} else 
-			return ResponseEntity.ok().body("Person Edited as :\n" + person.toString());
+			return new ResponseEntity<Person>(person , HttpStatus.BAD_REQUEST);
 	}
 	
-	@DeleteMapping("/Persons/{firstName}/{lastName}")
-	public ResponseEntity<String> deleteEntryByName(@PathVariable(value = "firstName") String firstName, @PathVariable(value = "lastName") String lastName) {
+	@DeleteMapping("/person/{firstName}/{lastName}")
+	public ResponseEntity<Person> deletePersonByName(@PathVariable(value = "firstName") String firstName, @PathVariable(value = "lastName") String lastName) {
+		Person person = PersonDao.getPerson(firstName, lastName);
 		boolean testDelete = PersonDao.deletePerson(firstName,lastName);
 		if(testDelete) {
-			return ResponseEntity.ok().body("User " + firstName + " " + lastName + " deleted");
+			return new ResponseEntity<Person>(person, HttpStatus.OK);
 		} else
-			return ResponseEntity.badRequest().body("User " + firstName + " " + lastName + " couldn't be deleted");
+			return new ResponseEntity<Person>(person, HttpStatus.NOT_FOUND);
 	}
 }

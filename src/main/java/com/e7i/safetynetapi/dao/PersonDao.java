@@ -31,6 +31,16 @@ public class PersonDao {
 		return -1;	
 	}
 	
+	public static Person getPerson(String firstName, String lastName) {
+
+		for(Person p : personDao) {
+			if(p.getFirstName().equalsIgnoreCase(firstName) && p.getLastName().equalsIgnoreCase(lastName)) {
+				return p;
+			}
+		} 
+		return null;	
+	}
+	
 	public static boolean savePerson(Person person) {
 		if(person.getFirstName() == null || person.getLastName() == null) {
 			return false;

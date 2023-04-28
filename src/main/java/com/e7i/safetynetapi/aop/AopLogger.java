@@ -7,8 +7,10 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
 @Aspect
+@Component
 public class AopLogger {
 	
 	private static Logger logger = LoggerFactory.getLogger(AopLogger.class);

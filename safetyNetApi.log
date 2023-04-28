@@ -1,0 +1,154 @@
+2023-04-118 14:17:46.651 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting SafetyNetApiApplication using Java 17.0.1 with PID 20072 (C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet\target\classes started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:17:46.667 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:17:47.807 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2023-04-118 14:17:47.818 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:17:47.821 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2023-04-118 14:17:47.822 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-118 14:17:47.948 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2023-04-118 14:17:47.949 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:291)] - Root WebApplicationContext: initialization completed in 1226 ms
+2023-04-118 14:17:48.555 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:17:49.018 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:17:49.043 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-118 14:17:49.056 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started SafetyNetApiApplication in 2.763 seconds (process running for 3.632)
+2023-04-118 14:17:54.056 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-118 14:17:54.058 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2023-04-118 14:17:54.065 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 6 ms
+2023-04-118 14:17:54.164 INFO [http-nio-8080-exec-1] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - getPersons OK
+2023-04-118 14:18:07.046 INFO [http-nio-8080-exec-3] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - addPerson OK
+2023-04-118 14:37:18.735 INFO [RMI TCP Connection(29)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159)] - Application shutdown requested.
+2023-04-118 14:37:18.799 INFO [RMI TCP Connection(29)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:37:18.799 INFO [RMI TCP Connection(29)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping service [Tomcat]
+2023-04-118 14:37:18.848 INFO [RMI TCP Connection(29)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-118 14:37:18.861 INFO [RMI TCP Connection(29)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:37:18.904 INFO [RMI TCP Connection(29)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:37:23.010 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting SafetyNetApiApplication using Java 17.0.1 with PID 2936 (C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet\target\classes started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:37:23.020 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:37:24.006 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2023-04-118 14:37:24.018 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:37:24.020 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2023-04-118 14:37:24.021 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-118 14:37:24.128 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2023-04-118 14:37:24.129 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:291)] - Root WebApplicationContext: initialization completed in 1062 ms
+2023-04-118 14:37:24.935 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:37:25.295 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:37:25.322 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-118 14:37:25.331 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started SafetyNetApiApplication in 2.66 seconds (process running for 3.581)
+2023-04-118 14:37:31.496 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-118 14:37:31.498 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2023-04-118 14:37:31.500 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 2 ms
+2023-04-118 14:37:57.956 INFO [http-nio-8080-exec-4] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - addPerson OK
+2023-04-118 14:38:12.789 INFO [http-nio-8080-exec-5] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - editPerson NOK
+2023-04-118 14:38:26.664 INFO [http-nio-8080-exec-7] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - editPerson OK
+2023-04-118 14:38:42.168 WARN [http-nio-8080-exec-8] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:207)] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2023-04-118 14:38:49.705 INFO [http-nio-8080-exec-9] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - deletePersonByName NOK
+2023-04-118 14:39:14.204 INFO [RMI TCP Connection(10)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159)] - Application shutdown requested.
+2023-04-118 14:39:14.216 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:39:14.217 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping service [Tomcat]
+2023-04-118 14:39:14.219 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-118 14:39:14.227 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:39:14.229 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:39:17.590 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting SafetyNetApiApplication using Java 17.0.1 with PID 21200 (C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet\target\classes started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:39:17.598 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:39:18.836 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2023-04-118 14:39:18.849 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:39:18.850 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2023-04-118 14:39:18.851 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-118 14:39:19.010 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2023-04-118 14:39:19.011 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:291)] - Root WebApplicationContext: initialization completed in 1368 ms
+2023-04-118 14:39:19.715 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:39:20.170 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:39:20.194 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-118 14:39:20.205 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started SafetyNetApiApplication in 2.998 seconds (process running for 3.929)
+2023-04-118 14:39:25.768 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-118 14:39:25.769 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2023-04-118 14:39:25.772 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 2 ms
+2023-04-118 14:39:25.832 WARN [http-nio-8080-exec-1] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:207)] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2023-04-118 14:39:52.808 WARN [http-nio-8080-exec-3] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:207)] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.e7i.safetynetapi.model.Person> com.e7i.safetynetapi.controller.PersonController.addPerson(com.e7i.safetynetapi.model.Person)]
+2023-04-118 14:40:34.008 WARN [http-nio-8080-exec-5] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:207)] - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.e7i.safetynetapi.model.Person> com.e7i.safetynetapi.controller.PersonController.addPerson(com.e7i.safetynetapi.model.Person)]
+2023-04-118 14:40:58.733 INFO [http-nio-8080-exec-8] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - addPerson NOK
+2023-04-118 14:41:28.313 INFO [http-nio-8080-exec-9] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - addPerson OK
+2023-04-118 14:41:40.434 INFO [http-nio-8080-exec-10] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - deletePersonByName NOK
+2023-04-118 14:42:02.542 INFO [http-nio-8080-exec-2] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - deletePersonByName OK
+2023-04-118 14:43:13.733 INFO [http-nio-8080-exec-4] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - deletePersonByName NOK
+2023-04-118 14:43:18.720 INFO [RMI TCP Connection(11)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159)] - Application shutdown requested.
+2023-04-118 14:43:18.734 INFO [RMI TCP Connection(11)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:43:18.734 INFO [RMI TCP Connection(11)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping service [Tomcat]
+2023-04-118 14:43:18.735 INFO [RMI TCP Connection(11)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-118 14:43:18.743 INFO [RMI TCP Connection(11)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:43:18.745 INFO [RMI TCP Connection(11)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:43:21.838 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting SafetyNetApiApplication using Java 17.0.1 with PID 4504 (C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet\target\classes started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:43:21.848 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:43:22.759 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2023-04-118 14:43:22.773 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:43:22.775 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2023-04-118 14:43:22.776 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-118 14:43:22.865 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2023-04-118 14:43:22.866 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:291)] - Root WebApplicationContext: initialization completed in 975 ms
+2023-04-118 14:43:23.422 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:43:23.793 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:43:23.811 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-118 14:43:23.820 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started SafetyNetApiApplication in 2.312 seconds (process running for 3.21)
+2023-04-118 14:43:31.631 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-118 14:43:31.632 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2023-04-118 14:43:31.634 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 2 ms
+2023-04-118 14:43:31.745 INFO [http-nio-8080-exec-1] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - addPerson OK
+2023-04-118 14:43:42.405 INFO [http-nio-8080-exec-3] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - deletePersonByName NOK
+2023-04-118 14:43:48.780 INFO [http-nio-8080-exec-4] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - deletePersonByName OK
+2023-04-118 14:44:13.690 INFO [RMI TCP Connection(10)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159)] - Application shutdown requested.
+2023-04-118 14:44:13.704 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:44:13.705 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping service [Tomcat]
+2023-04-118 14:44:13.706 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-118 14:44:13.712 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:44:13.715 INFO [RMI TCP Connection(10)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:44:18.609 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting SafetyNetApiApplication using Java 17.0.1 with PID 24368 (C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet\target\classes started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:44:18.621 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:44:19.562 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108)] - Tomcat initialized with port(s): 8080 (http)
+2023-04-118 14:44:19.574 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:44:19.575 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2023-04-118 14:44:19.576 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-04-118 14:44:19.680 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2023-04-118 14:44:19.680 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:291)] - Root WebApplicationContext: initialization completed in 1016 ms
+2023-04-118 14:44:20.230 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:44:20.607 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:44:20.626 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220)] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-118 14:44:20.634 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started SafetyNetApiApplication in 2.348 seconds (process running for 3.22)
+2023-04-118 14:44:29.518 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-118 14:44:29.520 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2023-04-118 14:44:29.528 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 6 ms
+2023-04-118 14:44:29.708 INFO [http-nio-8080-exec-1] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - addPerson OK
+2023-04-118 14:44:40.402 INFO [http-nio-8080-exec-3] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:54)] - deletePersonByName NOK
+2023-04-118 14:45:15.723 INFO [http-nio-8080-exec-4] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - deletePersonByName OK
+2023-04-118 14:45:24.072 INFO [http-nio-8080-exec-5] [com.e7i.safetynetapi.aop.AopLogger.getLog(AopLogger.java:52)] - getPersons OK
+2023-04-118 14:45:33.998 INFO [RMI TCP Connection(9)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:159)] - Application shutdown requested.
+2023-04-118 14:45:34.011 INFO [RMI TCP Connection(9)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:45:34.011 INFO [RMI TCP Connection(9)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping service [Tomcat]
+2023-04-118 14:45:34.012 INFO [RMI TCP Connection(9)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-118 14:45:34.018 INFO [RMI TCP Connection(9)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:45:34.020 INFO [RMI TCP Connection(9)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-118 14:45:52.576 INFO [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses(AnnotationConfigContextLoaderUtils.java:83)] - Could not detect default configuration classes for test class [com.e7i.safetynetapi.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-118 14:45:52.759 INFO [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:248)] - Found @SpringBootConfiguration com.e7i.safetynetapi.SafetyNetApiApplication for test class com.e7i.safetynetapi.controller.PersonControllerTest
+2023-04-118 14:45:53.200 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting PersonControllerTest using Java 17.0.1 with PID 15444 (started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:45:53.206 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:45:54.699 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:45:55.092 INFO [main] [org.springframework.mock.web.MockServletContext.log(MockServletContext.java:435)] - Initializing Spring TestDispatcherServlet ''
+2023-04-118 14:45:55.093 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet ''
+2023-04-118 14:45:55.100 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 2 ms
+2023-04-118 14:45:55.126 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started PersonControllerTest in 2.29 seconds (process running for 3.836)
+2023-04-118 14:46:48.162 INFO [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses(AnnotationConfigContextLoaderUtils.java:83)] - Could not detect default configuration classes for test class [com.e7i.safetynetapi.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-118 14:46:48.324 INFO [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:248)] - Found @SpringBootConfiguration com.e7i.safetynetapi.SafetyNetApiApplication for test class com.e7i.safetynetapi.controller.PersonControllerTest
+2023-04-118 14:46:48.766 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting PersonControllerTest using Java 17.0.1 with PID 9136 (started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:46:48.770 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:46:50.211 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:46:50.622 INFO [main] [org.springframework.mock.web.MockServletContext.log(MockServletContext.java:435)] - Initializing Spring TestDispatcherServlet ''
+2023-04-118 14:46:50.622 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet ''
+2023-04-118 14:46:50.634 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 2 ms
+2023-04-118 14:46:50.679 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started PersonControllerTest in 2.276 seconds (process running for 3.851)
+2023-04-118 14:47:16.840 INFO [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses(AnnotationConfigContextLoaderUtils.java:83)] - Could not detect default configuration classes for test class [com.e7i.safetynetapi.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-118 14:47:17.043 INFO [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:248)] - Found @SpringBootConfiguration com.e7i.safetynetapi.SafetyNetApiApplication for test class com.e7i.safetynetapi.controller.PersonControllerTest
+2023-04-118 14:47:17.493 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:51)] - Starting PersonControllerTest using Java 17.0.1 with PID 18520 (started by e7ine in C:\Eclipse_Workspaces_Folder\SafetyNet\Safetynet)
+2023-04-118 14:47:17.499 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:633)] - No active profile set, falling back to 1 default profile: "default"
+2023-04-118 14:47:18.886 INFO [main] [com.e7i.safetynetapi.SafetyNetApiApplication.init(SafetyNetApiApplication.java:33)] - SafetyNetAPI Initialized
+2023-04-118 14:47:19.338 INFO [main] [org.springframework.mock.web.MockServletContext.log(MockServletContext.java:435)] - Initializing Spring TestDispatcherServlet ''
+2023-04-118 14:47:19.339 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet ''
+2023-04-118 14:47:19.349 INFO [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 5 ms
+2023-04-118 14:47:19.381 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57)] - Started PersonControllerTest in 2.257 seconds (process running for 3.866)
