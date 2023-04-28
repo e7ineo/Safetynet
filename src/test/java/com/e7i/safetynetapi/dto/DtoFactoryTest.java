@@ -15,9 +15,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.e7i.safetynetapi.data.UserData;
 import com.e7i.safetynetapi.data.UserDataFactory;
-import com.e7i.safetynetapi.dto.Dto;
-import com.e7i.safetynetapi.dto.DtoFactory;
-import com.e7i.safetynetapi.dto.FirestationDto;
 
 @ExtendWith(MockitoExtension.class)
 public class DtoFactoryTest {

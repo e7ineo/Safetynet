@@ -31,6 +31,16 @@ public class MedicalRecordDao {
 		return -1;
 	}
 	
+	public static MedicalRecord getMedicalRecord(String firstName, String lastName) {
+
+		for(MedicalRecord mr : medicalRecordDao) {
+			if(mr.getFirstName().equalsIgnoreCase(firstName) && mr.getLastName().equalsIgnoreCase(lastName)) {
+				return mr;
+			}
+		} 
+		return null;	
+	}
+	
 	public static boolean addMedicalRecord(MedicalRecord medicalRecord) {
 		if(medicalRecord.getFirstName() == null|| medicalRecord.getLastName() == null) {
 			return false; 

@@ -32,7 +32,7 @@ public class MedicalRecordControllerTest {
 	@Test
 	@Order(1)
 	void testGetMedicalRecord() throws Exception {
-		mockMvc.perform(get("/MedicalRecordsAll"))
+		mockMvc.perform(get("/MedicalRecords"))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$", hasSize(23)))
 		.andExpect(jsonPath("$.[0].firstName" , containsString("John")));		
@@ -46,7 +46,7 @@ public class MedicalRecordControllerTest {
 		
 		int sizePreAdd = MedicalRecordDao.getMedicalRecordDao().size();
 		
-		mockMvc.perform(post("/medicalRecordAdd")
+		mockMvc.perform(post("/medicalRecord")
 				.contentType(APPLICATION_JSON)
 				.content(mockMedicalRecordJson))
 		.andExpect(status().isOk());
@@ -60,7 +60,7 @@ public class MedicalRecordControllerTest {
 				+ "\"birthdate\":\"01/08/1986\", \"medications\":[\"LThyrox\", \"Omeprazol\"], "
 				+ "\"allergies\":[\"None\"] }";
 		
-		mockMvc.perform(put("/medicalRecordEdit")
+		mockMvc.perform(put("/medicalRecord")
 				.contentType(APPLICATION_JSON)
 				.content(mockMedicalRecordJson))
 		.andExpect(status().isOk());
@@ -73,7 +73,7 @@ public class MedicalRecordControllerTest {
 	void testDeleteMedicalRecord() throws Exception {
 		int sizePreDelete = MedicalRecordDao.getMedicalRecordDao().size();
 		
-		mockMvc.perform(delete("/MedicalRecords/Eric/Cadigan")).andExpect(status().isOk());
+		mockMvc.perform(delete("/medicalRecord/Eric/Cadigan")).andExpect(status().isOk());
 		assertThat(MedicalRecordDao.getMedicalRecordDao().size()).isEqualTo(sizePreDelete - 1); 
 	}
 }
