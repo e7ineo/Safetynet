@@ -21,6 +21,7 @@ public class DtoFactory {
 	int adultsNumber;
 	int childNumber;
 	List<String> familyMemberList = new ArrayList<>();
+	String ErrorMessage;
 	
 	public List<Dto> createFirestationDto(int stationNumber) {
 		

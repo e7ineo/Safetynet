@@ -1,5 +1,7 @@
 package com.e7i.safetynetapi.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,51 +12,56 @@ import com.e7i.safetynetapi.dto.DtoFactory;
 public class DtoController {
 	
 	@GetMapping("/firestation")
-	public DtoFactory firestation(@RequestParam int stationNumber) {
+	public ResponseEntity<DtoFactory> firestation(@RequestParam int stationNumber) {
 		DtoFactory udf = new DtoFactory();
 		udf.createFirestationDto(stationNumber);
-		return udf;
+		if(!udf.getUsersDto().isEmpty()) {
+			return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);			
+		} else {
+			udf.setErrorMessage("stationNumber Incorect");
+			return new ResponseEntity<DtoFactory>(udf ,HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	@GetMapping("/childAlert")
-	public DtoFactory childAlert(@RequestParam String address) {
+	public ResponseEntity<DtoFactory> childAlert(@RequestParam String address) {
 		DtoFactory udf = new DtoFactory();
 		udf.createChildAlertDto(address);		
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 	
 	@GetMapping("/phoneAlert")
-	public DtoFactory phoneAlert(@RequestParam int firestation) {
+	public ResponseEntity<DtoFactory> phoneAlert(@RequestParam int firestation) {
 		DtoFactory udf = new DtoFactory();
 		udf.createPhoneNumberDto(firestation);		
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 	
 	@GetMapping("/fire")
-	public DtoFactory fire(@RequestParam String address) {
+	public ResponseEntity<DtoFactory> fire(@RequestParam String address) {
 		DtoFactory udf = new DtoFactory();
 		udf.createFireDto(address);		
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 	
 	@GetMapping("/flood")
-	public DtoFactory flood(@RequestParam int[] stationNumbers) {
+	public ResponseEntity<DtoFactory> flood(@RequestParam int[] stationNumbers) {
 		DtoFactory udf = new DtoFactory();
 		udf.createFloodDto(stationNumbers);		
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 	
 	@GetMapping("/personInfo")
-	public DtoFactory personInfo(@RequestParam String firstName, String lastName) {
+	public ResponseEntity<DtoFactory> personInfo(@RequestParam String firstName, String lastName) {
 		DtoFactory udf = new DtoFactory();
 		udf.createPersonInfoDto(firstName, lastName);
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 	
 	@GetMapping("/communityEmail")
-	public DtoFactory communityEmail(@RequestParam String city) {
+	public ResponseEntity<DtoFactory> communityEmail(@RequestParam String city) {
 		DtoFactory udf = new DtoFactory();
 		udf.createCommunityEmailDto(city);		
-		return udf;
+		return new ResponseEntity<DtoFactory>(udf,HttpStatus.OK);
 	}
 }
