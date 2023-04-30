@@ -31,7 +31,7 @@ public class AopLogger {
 		}
 	}
 }
-//	************** Old way with a lot of repetition *****************
+//	************** Old way *****************
 //	
 //	@Pointcut("within(com.e7i.safetynetapi.controller..*) && @annotation(org.springframework.web.bind.annotation.GetMapping)")
 //	private void pointcutGet() {}
