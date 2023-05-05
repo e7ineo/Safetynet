@@ -12,7 +12,7 @@ public class ChildAlertDto implements Dto{
 	String lastName;
 	int age;
 	
-	public ChildAlertDto (UserData userData) {
+	public ChildAlertDto(UserData userData) {
 		this.firstName = userData.getFirstName();
 		this.lastName = userData.getLastName();
 		this.age = userData.getAge();

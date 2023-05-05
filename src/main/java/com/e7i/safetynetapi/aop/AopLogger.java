@@ -15,7 +15,7 @@ public class AopLogger {
 	private static Logger logger = LoggerFactory.getLogger(AopLogger.class);
 	
 	@AfterReturning(pointcut = ("within(com.e7i.safetynetapi.controller..*)"), returning = "entity")
-	private void getMapLog(JoinPoint jp, ResponseEntity<?> entity) {
+	private void getMappingLog(JoinPoint jp, ResponseEntity<?> entity) {
 		getLog(jp, entity);	
 	}
 	
@@ -26,7 +26,7 @@ public class AopLogger {
 			if(jp.getSignature().getName().equals("error")){
 				logger.info("URL NOK -> " + entity.getBody());
 			} else {
-				logger.info(jp.getSignature().getName() + " NOK -> " + entity.getStatusCode());				
+				logger.error(jp.getSignature().getName() + " NOK -> " + entity.getStatusCode());				
 			}
 		}
 	}

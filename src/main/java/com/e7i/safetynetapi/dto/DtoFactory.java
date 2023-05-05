@@ -6,8 +6,9 @@ import java.util.List;
 import com.e7i.safetynetapi.data.UserData;
 import com.e7i.safetynetapi.data.UserDataFactory;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,15 +17,17 @@ import lombok.Setter;
 @JsonInclude(Include.NON_DEFAULT)
 public class DtoFactory {
 	
-	@JsonUnwrapped
+	@JsonProperty("Results")
 	List<Dto> usersDto = new ArrayList<>();
+	@JsonProperty("adultsCount")
 	int adultsNumber;
+	@JsonProperty("childrensCount")
 	int childNumber;
+	@JsonProperty("familyMembers")
 	List<String> familyMemberList = new ArrayList<>();
 	String ErrorMessage;
 	
-	public List<Dto> createFirestationDto(int stationNumber) {
-		
+	public List<Dto> createFirestationDto(int stationNumber) {		
 		FirestationDto firestationDto;
 		for(UserData ud : UserDataFactory.getUsersData()) {
 			if(stationNumber == ud.getFirestationNumber()) {
