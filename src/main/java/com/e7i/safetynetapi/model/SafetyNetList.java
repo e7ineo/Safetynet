@@ -15,22 +15,4 @@ public class SafetyNetList {
 	@JsonProperty("medicalrecords")
 	List <MedicalRecord> medicalRecords;
 	List <Firestation> firestations;
-		
-	@Override
-	public String toString() {
-		
-		for(Person p : persons) {
-		System.out.println(p.toString()); 
-		}
-		
-		for(Firestation f: firestations) {
-		System.out.println(f.toString());
-		}
-		
-		for(MedicalRecord mr : medicalRecords) {
-		System.out.println(mr.toString());
-		}
-		
-		return"File saved into 3 Lists";
-	}
 }

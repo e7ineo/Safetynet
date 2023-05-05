@@ -76,4 +76,9 @@ public class MedicalRecordControllerTest {
 		mockMvc.perform(delete("/medicalRecord/Eric/Cadigan")).andExpect(status().isOk());
 		assertThat(MedicalRecordDao.getMedicalRecordDao().size()).isEqualTo(sizePreDelete - 1); 
 	}
+	
+	@Test
+	void testDeleteMedicalRecordNotOk() throws Exception {		
+		mockMvc.perform(delete("/medicalRecord/Xxxxx/Xxxxx")).andExpect(status().is4xxClientError());
+	}
 }

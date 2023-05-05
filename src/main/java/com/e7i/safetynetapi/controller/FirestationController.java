@@ -56,6 +56,6 @@ public class FirestationController {
 		if(testDelete) {
 			return ResponseEntity.ok().body("Firestations with station number : " + station + " Deleted");
 		} else
-			return ResponseEntity.badRequest().body("The station number doesn't exist or is empty :\n" + station);
+			return ResponseEntity.badRequest().body("The station number doesn't exist :\n" + station);
 	}
 }

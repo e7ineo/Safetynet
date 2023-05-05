@@ -62,15 +62,24 @@ public class FirestationControllerTest {
 	void deleteByAddressFirestation() throws Exception {
 		int preSize = FirestationDao.getFirestationDao().size();
 		mockMvc.perform(delete("/firestationByAddress/{address}","1509 Culver St")).andExpect(status().isOk());
-		assertThat(FirestationDao.getFirestationDao().size()).isEqualTo(preSize - 1);;
+		assertThat(FirestationDao.getFirestationDao().size()).isEqualTo(preSize - 1);
 	}
 	
 	@Test
 	void deleteByIdFirestation() throws Exception {
 		int preSize = FirestationDao.getFirestationDao().size();
 		mockMvc.perform(delete("/firestationById/{station}", "1")).andExpect(status().isOk());
-		assertThat(FirestationDao.getFirestationDao().size()).isEqualTo(preSize - 3);;
+		assertThat(FirestationDao.getFirestationDao().size()).isEqualTo(preSize - 3);
 	}
 	
+	@Test
+	void deleteByIdFirestationNotOk() throws Exception {
+	mockMvc.perform(delete("/firestationById/{station}", "1000")).andExpect(status().is4xxClientError());
+	}
+	
+	@Test
+	void deleteByAddressFirestationNotOk() throws Exception {
+		mockMvc.perform(delete("/firestationByAddress/{address}","xxxxxxxxx")).andExpect(status().is4xxClientError());
+	}
 	
 }

@@ -74,4 +74,9 @@ public class PersonControllerTest {
 		mockMvc.perform(delete("/person/Eric/Cadigan")).andExpect(status().isOk());
 		assertThat(PersonDao.getPersonDao().size()).isEqualTo(sizePreDelete - 1);	
 	}	
+	
+	@Test
+	void testPersonDeleteNotOk() throws Exception {
+		mockMvc.perform(delete("/person/Xxxxx/Xxxxx")).andExpect(status().is4xxClientError());	
+	}	
 }
