@@ -28,8 +28,7 @@ public class SafetyNetApiApplication {
 		DaoFactory df = new DaoFactory();
 		df.createFileFromUrl("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DA+Java+EN/P5+/data.json");
 		df.createDao(new File("src/main/resources/data.json"));
-		UserDataFactory udf = new UserDataFactory();
-		udf.createUsersModel();
+		UserDataFactory.createUsersModel();
 		logger.info("SafetyNetAPI Initialized");
 	}
 }

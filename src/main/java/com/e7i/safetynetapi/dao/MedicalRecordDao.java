@@ -3,6 +3,7 @@ package com.e7i.safetynetapi.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.e7i.safetynetapi.data.UserDataFactory;
 import com.e7i.safetynetapi.model.MedicalRecord;
 
 public class MedicalRecordDao {
@@ -46,6 +47,7 @@ public class MedicalRecordDao {
 			return false; 
 		} else 
 			medicalRecordDao.add(medicalRecord);
+			UserDataFactory.createUsersModel();
 		return true;
 	}
 	
@@ -55,6 +57,7 @@ public class MedicalRecordDao {
 			medicalRecordDao.get(index).setAllergies(medicalRecord.getAllergies());
 			medicalRecordDao.get(index).setBirthdate(medicalRecord.getBirthdate());
 			medicalRecordDao.get(index).setMedications(medicalRecord.getMedications());
+			UserDataFactory.createUsersModel();
 			return true;
 		} else 
 			return false;
@@ -64,6 +67,7 @@ public class MedicalRecordDao {
 		int index = MedicalRecordDao.getIndexMedicalRecord(firstName, lastName);
 		if(index >= 0) {
 			medicalRecordDao.remove(index);
+			UserDataFactory.createUsersModel();
 			return true;
 		} else 
 			return false;

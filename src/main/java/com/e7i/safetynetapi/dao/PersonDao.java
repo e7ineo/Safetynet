@@ -3,6 +3,7 @@ package com.e7i.safetynetapi.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.e7i.safetynetapi.data.UserDataFactory;
 import com.e7i.safetynetapi.model.Person;
 
 public class PersonDao {
@@ -45,9 +46,10 @@ public class PersonDao {
 		if(person.getFirstName() == null || person.getLastName() == null) {
 			return false;
 		} else {
-			personDao.add(person);		
+			personDao.add(person);
+			UserDataFactory.createUsersModel();
+			return true;		
 		}
-		return true;		
 	}
 	
 	public static boolean editPerson(Person person) {
@@ -69,7 +71,7 @@ public class PersonDao {
 			if(person.getPostalCode() != null) {
 				personDao.get(index).setPostalCode(person.getPostalCode());				
 			}
-			
+			UserDataFactory.createUsersModel();
 			return true;
 		} else System.out.println("Person doesn't exist");
 		return false;
@@ -80,6 +82,7 @@ public class PersonDao {
 			
 		if(index >= 0 ) {
 			personDao.remove(index);
+			UserDataFactory.createUsersModel();
 			return true;
 		} else System.out.println("Person doesn't exist");
 		return false;

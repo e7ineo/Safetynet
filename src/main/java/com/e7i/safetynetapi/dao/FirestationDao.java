@@ -3,6 +3,7 @@ package com.e7i.safetynetapi.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.e7i.safetynetapi.data.UserDataFactory;
 import com.e7i.safetynetapi.model.Firestation;
 
 public class FirestationDao {
@@ -33,14 +34,18 @@ public class FirestationDao {
 	public static boolean addFirestation(Firestation firestation) {
 		if(firestation.getStationNumber() <= 0 || firestation.getAddress() == null) {
 			return false;
-		} else firestationDao.add(firestation);
-		return true;
+		} else {
+			firestationDao.add(firestation);
+			UserDataFactory.createUsersModel();
+			return true;
+		}
 	}
 	
 	public static boolean editFirestation(Firestation firestation) {
 		int index = FirestationDao.getIndexFirestation(firestation.getAddress());
 		if(index >= 0) {
 			firestationDao.get(index).setStationNumber(firestation.getStationNumber());
+			UserDataFactory.createUsersModel();
 			return true;
 		} else
 			return false;
@@ -50,6 +55,7 @@ public class FirestationDao {
 		int index = FirestationDao.getIndexFirestation(address);
 		if(index >= 0) {
 			firestationDao.remove(index);
+			UserDataFactory.createUsersModel();
 			return true;
 		} else
 			return false;
@@ -64,6 +70,7 @@ public class FirestationDao {
 		}
 		if(!toRemove.isEmpty()) {
 			firestationDao.removeAll(toRemove);
+			UserDataFactory.createUsersModel();
 			return true;
 		} else
 			return false;	
