@@ -18,7 +18,7 @@ public class UserDataFactory {
 		return usersData;
 	}
 	
-	public List<UserData> createUsersModel(){
+	public static void createUsersModel(){
 		UserData user;
 		
 		for(Person p : PersonDao.getPersonDao()) {
@@ -33,6 +33,5 @@ public class UserDataFactory {
 				}
 			}
 		}
-		return usersData;
 	}
 }

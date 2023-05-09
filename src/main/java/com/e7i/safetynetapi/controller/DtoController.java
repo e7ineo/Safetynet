@@ -15,12 +15,7 @@ public class DtoController {
 	public ResponseEntity<DtoFactory> firestation(@RequestParam int stationNumber) {
 		DtoFactory udf = new DtoFactory();
 		udf.createFirestationDto(stationNumber);
-		if(!udf.getUsersDto().isEmpty()) {
-			return new ResponseEntity<DtoFactory>(udf, HttpStatus.OK);			
-		} else {
-			udf.setErrorMessage("stationNumber Incorect");
-			return new ResponseEntity<DtoFactory>(udf, HttpStatus.BAD_REQUEST);
-		}
+		return new ResponseEntity<DtoFactory>(udf, HttpStatus.OK);			
 	}
 	
 	@GetMapping("/childAlert")
