@@ -3,7 +3,6 @@ package com.e7i.safetynetapi.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.e7i.safetynetapi.data.UserData;
 import com.e7i.safetynetapi.data.UserDataFactory;
 import com.e7i.safetynetapi.model.Firestation;
 
