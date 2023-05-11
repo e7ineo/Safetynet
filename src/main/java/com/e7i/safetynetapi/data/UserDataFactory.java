@@ -75,6 +75,28 @@ public class UserDataFactory {
 			usersData.add(userData);
 		}		
 	}
+	
+	public static void updateUserDataMedicalRecord(MedicalRecord medicalRecord) {
+		boolean personExist = false;
+		Person pRecord = new Person();
+		
+		for(Person p : PersonDao.getPersonDao()) {
+			if(medicalRecord.getFirstName().equalsIgnoreCase(p.getFirstName()) && medicalRecord.getLastName().equalsIgnoreCase(p.getLastName())) {
+				pRecord = p;
+				personExist = true;
+			}
+		}
+		
+		if(personExist) {
+			UserData userData = new UserData(pRecord, medicalRecord);
+			usersData.add(userData);
+		}
+		
+		if(!personExist) {
+			UserData userData = new UserData(medicalRecord);
+			usersData.add(userData);
+		}	
+	}
 
 	public static void updateUserDataEditPerson(Person person) {
 		
@@ -101,6 +123,28 @@ public class UserDataFactory {
 		}		
 	} 
 	
+	
+	public static void updateUserDataEditMedicalRecord(MedicalRecord medicalRecord) {
+		
+		for(UserData ud : usersData) {
+			if(medicalRecord.getFirstName().equalsIgnoreCase(ud.getFirstName()) && medicalRecord.getLastName().equalsIgnoreCase(ud.getLastName())) {
+				
+				ud.setBirthdate(medicalRecord.getBirthdate());
+				ud.setAge(medicalRecord.getBirthdate());
+				ud.setAdult(ud.getAge());
+				ud.setMedications(medicalRecord.getMedications());
+				ud.setAllergies(medicalRecord.getAllergies());
+			}
+		}
+		
+		for(Person p : PersonDao.getPersonDao()) {
+			if(medicalRecord.getFirstName().equalsIgnoreCase(p.getFirstName()) && medicalRecord.getLastName().equalsIgnoreCase(p.getLastName())) {
+				p.setFirstName(medicalRecord.getFirstName());
+				p.setLastName(medicalRecord.getLastName());
+			}
+		}		
+	} 
+	
 	public static void updateUserDataDeletePerson(String firstName, String lastName) {
 		
 		for(UserData ud : usersData) {
@@ -109,4 +153,12 @@ public class UserDataFactory {
 			}
 		}
 	} 
+	
+	public static void updateFirestationEdit(Firestation firestation) {
+		for(UserData ud : usersData) {
+			if(firestation.getAddress().equalsIgnoreCase(ud.getAddress())){
+				ud.setFirestationNumber(firestation.getStationNumber());
+			}
+		}
+	}
 }
