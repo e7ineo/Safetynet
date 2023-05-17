@@ -44,6 +44,54 @@ public class UserData {
 		this.medications = medicalRecord.getMedications();
 		this.allergies = medicalRecord.getAllergies();
 	}
+	
+	public UserData (Person person, MedicalRecord medicalRecord) {
+		this.firstName = person.getFirstName();
+		this.lastName = person.getLastName();
+		this.birthdate = medicalRecord.getBirthdate();
+		this.age = setAge(medicalRecord.getBirthdate());
+		this.adult = this.setAdult(this.age);
+		this.address = person.getAddress();
+		this.postalCode = person.getPostalCode();
+		this.city = person.getCity();
+		this.phoneNumber = person.getPhoneNumber();
+		this.email = person.getEmail();
+		this.medications = medicalRecord.getMedications();
+		this.allergies = medicalRecord.getAllergies();
+	}
+		
+	public UserData(Person person, Firestation firestation) {
+		this.firstName = person.getFirstName();
+		this.lastName = person.getLastName();
+		this.adult = this.setAdult(this.age);
+		this.address = person.getAddress();
+		this.postalCode = person.getPostalCode();
+		this.city = person.getCity();
+		this.phoneNumber = person.getPhoneNumber();
+		this.email = person.getEmail();
+		this.firestationNumber = firestation.getStationNumber();
+		
+	}
+	
+	public UserData(Person person) {
+		this.firstName = person.getFirstName();
+		this.lastName = person.getLastName();
+		this.address = person.getAddress();
+		this.postalCode = person.getPostalCode();
+		this.city = person.getCity();
+		this.phoneNumber = person.getPhoneNumber();
+		this.email = person.getEmail();		
+	}
+	
+	public UserData(MedicalRecord medicalRecord) {
+		this.firstName = medicalRecord.getFirstName();
+		this.lastName = medicalRecord.getLastName();
+		this.birthdate = medicalRecord.getBirthdate();
+		this.age = setAge(medicalRecord.getBirthdate());
+		this.adult = this.setAdult(this.age);
+		this.medications = medicalRecord.getMedications();
+		this.allergies = medicalRecord.getAllergies();
+	}
 
 	public int setAge(String birthDate) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");

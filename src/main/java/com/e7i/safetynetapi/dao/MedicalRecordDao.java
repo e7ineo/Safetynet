@@ -47,7 +47,7 @@ public class MedicalRecordDao {
 			return false; 
 		} else 
 			medicalRecordDao.add(medicalRecord);
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataMedicalRecord(medicalRecord);
 		return true;
 	}
 	
@@ -57,7 +57,7 @@ public class MedicalRecordDao {
 			medicalRecordDao.get(index).setAllergies(medicalRecord.getAllergies());
 			medicalRecordDao.get(index).setBirthdate(medicalRecord.getBirthdate());
 			medicalRecordDao.get(index).setMedications(medicalRecord.getMedications());
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataEditMedicalRecord(medicalRecord);
 			return true;
 		} else 
 			return false;
@@ -67,7 +67,7 @@ public class MedicalRecordDao {
 		int index = MedicalRecordDao.getIndexMedicalRecord(firstName, lastName);
 		if(index >= 0) {
 			medicalRecordDao.remove(index);
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataDeletePerson(firstName, lastName);
 			return true;
 		} else 
 			return false;

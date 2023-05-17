@@ -47,7 +47,7 @@ public class PersonDao {
 			return false;
 		} else {
 			personDao.add(person);
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataPerson(person);
 			return true;		
 		}
 	}
@@ -71,7 +71,7 @@ public class PersonDao {
 			if(person.getPostalCode() != null) {
 				personDao.get(index).setPostalCode(person.getPostalCode());				
 			}
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataEditPerson(person);
 			return true;
 		} else System.out.println("Person doesn't exist");
 		return false;
@@ -82,7 +82,7 @@ public class PersonDao {
 			
 		if(index >= 0 ) {
 			personDao.remove(index);
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateUserDataDeletePerson(firstName, lastName);
 			return true;
 		} else System.out.println("Person doesn't exist");
 		return false;

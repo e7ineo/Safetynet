@@ -90,6 +90,7 @@ public class MedicalRecordDaoTest {
 	void testAddMedicalRecordTrue() {
 		when(medicalRecordMock.getFirstName()).thenReturn("Derrick");
 		when(medicalRecordMock.getLastName()).thenReturn("Rose");
+		when(medicalRecordMock.getBirthdate()).thenReturn("08/04/1988");
 		boolean test = MedicalRecordDao.addMedicalRecord(medicalRecordMock);
 		assertThat(test).isTrue();
 	}

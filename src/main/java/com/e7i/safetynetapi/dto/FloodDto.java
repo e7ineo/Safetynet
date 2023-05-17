@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.e7i.safetynetapi.data.UserData;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;

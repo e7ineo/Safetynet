@@ -36,7 +36,6 @@ public class FirestationDao {
 			return false;
 		} else {
 			firestationDao.add(firestation);
-			UserDataFactory.createUsersModel();
 			return true;
 		}
 	}
@@ -45,7 +44,7 @@ public class FirestationDao {
 		int index = FirestationDao.getIndexFirestation(firestation.getAddress());
 		if(index >= 0) {
 			firestationDao.get(index).setStationNumber(firestation.getStationNumber());
-			UserDataFactory.createUsersModel();
+			UserDataFactory.updateFirestationEdit(firestation);
 			return true;
 		} else
 			return false;
