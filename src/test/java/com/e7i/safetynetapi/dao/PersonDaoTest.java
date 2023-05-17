@@ -89,6 +89,7 @@ public class PersonDaoTest {
 	void testSavePersonTrue() {
 		when(personMock.getFirstName()).thenReturn("Derrick");
 		when(personMock.getLastName()).thenReturn("Rose");
+		when(personMock.getAddress()).thenReturn("2584 25a 5th Avenue");
 		boolean test = PersonDao.savePerson(personMock);
 		assertThat(test).isTrue();
 	}

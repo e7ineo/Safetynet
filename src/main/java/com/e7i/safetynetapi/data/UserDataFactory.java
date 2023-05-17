@@ -146,11 +146,14 @@ public class UserDataFactory {
 	} 
 	
 	public static void updateUserDataDeletePerson(String firstName, String lastName) {
-		
+		int index = -1;		
 		for(UserData ud : usersData) {
 			if(firstName.equalsIgnoreCase(ud.getFirstName()) && lastName.equalsIgnoreCase(ud.getLastName())) {
-				usersData.remove(ud);
+				index = usersData.indexOf(ud);
 			}
+		}
+		if(index != -1) {
+			usersData.remove(index);			
 		}
 	} 
 	
